@@ -1,0 +1,3 @@
+espendTranslationDomainBundle:
+    resource: "@espendTranslationDomainBundle/Resources/config/routing.yml"
+    prefix:   /

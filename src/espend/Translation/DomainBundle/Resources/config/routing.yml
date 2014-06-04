@@ -1,0 +1,3 @@
+espend_translation_domain_homepage:
+    pattern:  /espend/translation/domain
+    defaults: { _controller: espendTranslationDomainBundle:Default:index }

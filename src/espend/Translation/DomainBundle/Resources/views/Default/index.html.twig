@@ -1,0 +1,21 @@
+
+{# should registered in compiled file: goto, completion, annotator #}
+{{ 'yaml.symfony.great'|trans({}, 'Yaml') }}
+
+{# should registered in compiled file: completion, annotator  #}
+{{ 'xlf.symfony.great'|trans({}, 'Interchange') }}
+
+{# should registered in compiled file: completion, annotator  #}
+{{ 'gettext.symfony.great'|trans({}, 'GetText') }}
+
+
+{# --- weak --- #}
+
+{# should valid because of indexer: goto, completion, annotator  #}
+{{ 'yaml_weak.symfony.great'|trans({}, 'WeakYaml') }}
+
+{# not supported ! #}
+{{ 'xlf_weak.symfony.great'|trans({}, 'WeakInterchange') }}
+
+{# not supported ! #}
+{{ 'gettext_weak.symfony.great'|trans({}, 'GetText') }}
