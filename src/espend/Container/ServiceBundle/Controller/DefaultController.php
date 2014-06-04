@@ -8,6 +8,14 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
+
+        // type provider should match on all
+        $this->container->get('espend_container_service.yaml')->publicMethod();
+        $this->container->get('espend_container_service_weak.xml.weak_class')->weakPublicMethod();
+        $this->container->get('espend_container_service_weak.xml.weak_class')->weakPublicMethodHint($this->container);
+        $this->get('espend_container_service.yaml')->publicMethod();
+        $this->get('espend_container_service_weak.xml.weak_class')->weakPublicMethodHint($this->container);
+
         // should navigate to class
         $this->container->get('espend_container_service.yaml');
 
