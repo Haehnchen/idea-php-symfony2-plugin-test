@@ -1,6 +1,6 @@
 What's this?
 -----------
-Just a Symfony2 installation that reflects features of [Symfony2 Plugin](http://plugins.jetbrains.com/plugin/7219 and [Php Annotation](http://plugins.jetbrains.com/plugin/7320) for PhpStorm and provides several use cases for testing
+Just a Symfony2 installation that reflects features of [Symfony2 Plugin](http://plugins.jetbrains.com/plugin/7219) and [Php Annotation](http://plugins.jetbrains.com/plugin/7320) for PhpStorm and provides several use cases for testing
 
 
 Links
@@ -10,5 +10,6 @@ Links
 
 Plugins
 -----------
-* [Symfony2 Plugin](http://plugins.jetbrains.com/plugin/7219
+* [JetBrains Plugin Repository](http://plugins.jetbrains.com/?phpStorm)
+* [Symfony2 Plugin](http://plugins.jetbrains.com/plugin/7219)
 * [Php Annotation](http://plugins.jetbrains.com/plugin/7320)
