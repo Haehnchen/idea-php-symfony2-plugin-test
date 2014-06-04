@@ -1,0 +1,23 @@
+parameters:
+    espend_container_service_weak.yml.weak_class.class: \espend\Container\ServiceWeakBundle\Classes\WeakYamlClass
+
+services:
+
+    # should provide: parameter goto, argument completion, and is visible
+    espend_container_service_weak.yml.weak_class:
+        class: %espend_container_service_weak.yml.weak_class.class%
+        arguments: [@service_container]
+
+    espend_container_service_weak.yml.weak_class_non_public:
+        class: %espend_container_service_weak.yml.weak_class.class%
+        arguments: [@service_container]
+        public: false
+
+
+    # should provide goto
+    espend_container_service.yaml_weak_parameter:
+        class: %espend_container_service_weak.yml.weak_class.class%
+
+    # should provide goto
+    espend_container_service.xml_weak_parameter:
+        class: %espend_container_service_weak.xml.weak_class.class%

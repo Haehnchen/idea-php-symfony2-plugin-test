@@ -1,0 +1,27 @@
+parameters:
+    espend_container_service.yaml.class: espend\Container\ServiceBundle\Classes\YamlClass
+
+services:
+
+    espend_container_service.yaml:
+        class: %espend_container_service.yaml.class%
+        arguments: [@service_container]
+
+
+    # should annotate type hint in argument and calls
+    espend_container_service.yaml_hint_check:
+        class: %espend_container_service.yaml.class%
+        arguments: [@twig]
+        calls:
+            - [publicMethodHint, [@twig]]
+            - [publicMethodHint, ["@twig"]]
+
+    # should provide goto to xml parameter
+    espend_container_service.yaml_cross_parameter:
+        class: %espend_container_service.xml.class%
+
+    # should provide not provide hint error
+    espend_container_service.yaml_cross_hint:
+        class: espend\Container\ServiceBundle\Classes\XmlClass
+        calls:
+            - [crossHint, [@espend_container_service.xml]]

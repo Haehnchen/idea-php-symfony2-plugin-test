@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="espend_container_service.xml.class">espend\Container\ServiceBundle\Classes\XmlClass</parameter>
+    </parameters>
+
+    <services>
+
+        <service id="espend_container_service.xml" class="%espend_container_service.xml.class%">
+            <argument type="service" id="service_container"/>
+        </service>
+
+        <!-- should annotate type hint in argument and calls -->
+        <service id="espend_container_service.xml_hint_check" class="%espend_container_service.xml.class%">
+            <argument type="service" id="twig"/>
+            <call method="publicMethodHint">
+                <argument type="service" id="twig"/>
+            </call>
+        </service>
+
+    </services>
+</container>
