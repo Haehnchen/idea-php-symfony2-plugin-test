@@ -1,6 +1,10 @@
 parameters:
     espend_container_service.yaml.class: espend\Container\ServiceBundle\Classes\YamlClass
 
+    # should annotate duplicate
+    espend_parameter_duplicate: espend\Container\ServiceBundle\Classes\YamlClass
+    espend_parameter_duplicate: espend\Container\ServiceBundle\Classes\YamlClass
+
 services:
 
     espend_container_service.yaml:
@@ -20,8 +24,14 @@ services:
     espend_container_service.yaml_cross_parameter:
         class: %espend_container_service.xml.class%
 
-    # should provide not provide hint error
+    # should not provide hint error
     espend_container_service.yaml_cross_hint:
         class: espend\Container\ServiceBundle\Classes\XmlClass
         calls:
             - [crossHint, [@espend_container_service.xml]]
+
+    # should annotate duplicate
+    espend_service_duplicate:
+        class: espend\Container\ServiceBundle\Classes\XmlClass
+    espend_service_duplicate:
+        class: espend\Container\ServiceBundle\Classes\XmlClass

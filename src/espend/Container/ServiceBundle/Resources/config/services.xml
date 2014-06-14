@@ -4,6 +4,10 @@
 
     <parameters>
         <parameter key="espend_container_service.xml.class">espend\Container\ServiceBundle\Classes\XmlClass</parameter>
+
+        <!-- should annotate duplicate -->
+        <parameter key="espend_parameter_duplicate">espend\Container\ServiceBundle\Classes\XmlClass</parameter>
+        <parameter key="espend_parameter_duplicate">espend\Container\ServiceBundle\Classes\XmlClass</parameter>
     </parameters>
 
     <services>
@@ -19,6 +23,10 @@
                 <argument type="service" id="twig"/>
             </call>
         </service>
+
+        <!-- should annotate duplicate -->
+        <service id="espend_service_duplicate" class="%espend_container_service.xml.class%" />
+        <service id="espend_service_duplicate" class="%espend_container_service.xml.class%" />
 
     </services>
 </container>
