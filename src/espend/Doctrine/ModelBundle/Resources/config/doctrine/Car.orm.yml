@@ -1,0 +1,11 @@
+espend\Doctrine\ModelBundle\Entity\Car:
+    type: entity
+    table: null
+    repositoryClass: espend\Doctrine\ModelBundle\Entity\CarRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }
