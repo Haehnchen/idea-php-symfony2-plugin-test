@@ -1,0 +1,16 @@
+
+# should start with whitespace; to check ducment whitespace
+
+espend_router_weak_route_hash:
+    pattern:  /weak
+    defaults: { _controller: espendRouterRoutesBundle:Default:index }
+
+espend_router_weak_route_compound:
+    pattern:  /weak
+    defaults:
+        _controller: espendRouterRoutesBundle:Default:index
+
+# should not inside index
+espend_router_weak_route_invalid_index:
+    pattern_:  /weak
+    defaults: { _controller: espendRouterRoutesBundle:Default:index }

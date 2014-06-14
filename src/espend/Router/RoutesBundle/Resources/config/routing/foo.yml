@@ -1,0 +1,11 @@
+# should annotate duplicate
+espend_router_route_duplicate:
+    pattern:  /duplicate
+    defaults: { _controller: espendRouterRoutesBundle:Default:index }
+espend_router_route_duplicate:
+    pattern:  /duplicate
+    defaults: { _controller: espendRouterRoutesBundle:Default:index }
+
+espend_router_routes_homepage1:
+    pattern:  /hello/{name}
+    defaults: { _controller: espendRouterRoutesBundle:Default:index }

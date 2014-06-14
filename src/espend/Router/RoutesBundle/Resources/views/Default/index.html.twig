@@ -1,0 +1,11 @@
+{# should be known with parameter and should provide code folding #}
+{{ path('espend_router_routes_homepage', {'name': 'foo'}) }}
+
+{# weak route #}
+{{ path('espend_router_weak_route_hash') }}
+
+{# weak annotation route #}
+{{ path('weak_annotation') }}
+
+{# should not be in index #}
+{{ path('espend_router_weak_route_invalid_index') }}
