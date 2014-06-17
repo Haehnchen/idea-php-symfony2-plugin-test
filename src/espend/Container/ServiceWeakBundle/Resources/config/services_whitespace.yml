@@ -1,0 +1,10 @@
+
+parameters:
+    espend_container_service_weak_whitespace.yml.weak_class.class: \espend\Container\ServiceWeakBundle\Classes\WeakYamlClass
+
+services:
+
+    # should provide: parameter goto, argument completion, and is visible
+    espend_container_service_weak_whitespace.yml.weak_class:
+        class: %espend_container_service_weak.yml.weak_class.class%
+        arguments: [@service_container]

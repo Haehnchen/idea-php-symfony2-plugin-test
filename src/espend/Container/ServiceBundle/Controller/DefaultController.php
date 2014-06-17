@@ -44,4 +44,11 @@ class DefaultController extends Controller
 
         return $this->render('espendTranslationDomainBundle:Default:index.html.twig');
     }
+
+    public function weakWhitespaceAction()
+    {
+        $this->container->get('espend_container_service_weak_whitespace.yml.weak_class');
+        $this->container->getParameter('espend_container_service_weak_whitespace.yml.weak_class.class');
+    }
+
 }
