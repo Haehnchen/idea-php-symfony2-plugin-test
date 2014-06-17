@@ -1,0 +1,14 @@
+espend\Doctrine\ModelBundle\Entity\Bike:
+    type: entity
+    table: null
+    id:
+        id_1:
+            type: string
+        id_2:
+            type: integer
+    fields:
+        field_1:
+            type: string
+        field_2:
+            type: string
+    lifecycleCallbacks: {  }

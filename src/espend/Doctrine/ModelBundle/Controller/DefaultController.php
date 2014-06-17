@@ -38,6 +38,17 @@ class DefaultController extends Controller
         return array();
     }
 
+    public function indexIdAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->getRepository('espendDoctrineModelBundle:Bike')->findOneBy(array(
+            'field_1' => '',
+            'id_1' => '',
+        ));
+
+        return array();
+    }
+
     public function indexAnnotationAction()
     {
 
