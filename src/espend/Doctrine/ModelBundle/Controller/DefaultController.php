@@ -28,7 +28,12 @@ class DefaultController extends Controller
         $em->getRepository('espendDoctrineModelBundle:Car')->find(1)->getId();
         $em->getRepository('espendDoctrineModelBundle:Car')->findOneBy(array())->getId();
         $em->getRepository('espendDoctrineModelBundle:Car')->findBy(array())[0]->getId();
-        //$em->getRepository('espendDoctrineModelBundle:Car')->findAll(array())[0]->getId(); // <- @TODO
+
+        // type provider for array
+        $array = $em->getRepository('espendDoctrineModelBundle:Car')->findAll();
+        foreach($array as $car) {
+            $car->getId();
+        }
 
         // parameter
         $em->getRepository('espendDoctrineModelBundle:Car')->findOneBy(array(
