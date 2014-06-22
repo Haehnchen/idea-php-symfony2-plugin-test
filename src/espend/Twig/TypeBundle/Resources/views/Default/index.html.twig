@@ -1,0 +1,32 @@
+
+{# bar \espend\Doctrine\ModelBundle\Entity\Bike #}
+
+{% block test0 %}
+
+    {{ car.id }}
+
+    {% for foo in cars %}
+       {{ foo.id }}
+    {% endfor %}
+
+    {{ bar.field1 }}
+
+{% endblock %}
+
+{% block test1 %}
+    {% include 'espendTwigTypeBundle:Default/Include:type_include.html.twig' %}
+{% endblock %}
+
+{% block test2 %}
+
+    {% for foo in cars %}
+        {% include 'espendTwigTypeBundle:Default/Include:type_include_each.html.twig' %}
+    {% endfor %}
+
+{% endblock %}
+
+{% block test3 %}
+
+    {% include 'espendTwigTypeBundle:Default/Include:type_include_with.html.twig' with {'foo': car} %}
+
+{% endblock %}

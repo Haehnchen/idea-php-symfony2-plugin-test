@@ -1,0 +1,14 @@
+
+{# @controller espendTwigTypeBundle:Default:index #}
+
+{% block test %}
+
+    {{ car.id }}
+
+    {% for foo in cars %}
+       {{ foo.id }}
+    {% endfor %}
+
+    {{ bar.field1 }}
+
+{% endblock %}
