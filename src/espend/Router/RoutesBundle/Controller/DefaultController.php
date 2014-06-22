@@ -19,6 +19,9 @@ class DefaultController extends Controller
         // weak annotation route
         $this->generateUrl('weak_annotation');
 
+        // weak route
+        $this->generateUrl('espend_router_routes_xml_index');
+
         // should not be in index
         $this->generateUrl('espend_router_weak_route_invalid_index');
 
