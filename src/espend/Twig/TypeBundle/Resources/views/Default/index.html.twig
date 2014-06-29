@@ -14,13 +14,13 @@
 {% endblock %}
 
 {% block test1 %}
-    {% include 'espendTwigTypeBundle:Default/Include:type_include.html.twig' %}
+    {% include 'espendTwigTypeBundle:Default/Include:type_include.html.twig' with {'foo': car} only %}
 {% endblock %}
 
 {% block test2 %}
 
     {% for foo in cars %}
-        {% include 'espendTwigTypeBundle:Default/Include:type_include_each.html.twig' %}
+        {% include 'espendTwigTypeBundle:Default/Include:type_include_each.html.twig' with {'car': foo} %}
     {% endfor %}
 
 {% endblock %}
