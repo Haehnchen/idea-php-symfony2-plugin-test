@@ -1,0 +1,35 @@
+espend\Doctrine\RelationBundle\Entity\Relation:
+    type: entity
+    table: foo_table_relation
+    repositoryClass: espend\Doctrine\RelationBundle\Entity\RelationRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        foo:
+            type: integer
+    manyToOne:
+        many_to_one:
+            targetEntity: espend\Doctrine\RelationBundle\Entity\ForeignEntity
+    manyToMany:
+        many_to_many:
+            targetEntity: espend\Doctrine\RelationBundle\Entity\ForeignEntity
+            joinTable:
+                name: cms_users_groups
+                joinColumns:
+                    user_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    group_id:
+                        referencedColumnName: id
+    oneToOne:
+        one_to_one:
+            targetEntity: espend\Doctrine\RelationBundle\Entity\ForeignEntity
+    oneToMany:
+        one_to_many:
+            targetEntity: espend\Doctrine\RelationBundle\Entity\ForeignEntity
+            mappedBy: foo
+    lifecycleCallbacks: {  }

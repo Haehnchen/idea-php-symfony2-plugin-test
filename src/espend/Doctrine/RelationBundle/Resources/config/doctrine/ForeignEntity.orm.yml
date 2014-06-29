@@ -1,0 +1,13 @@
+espend\Doctrine\RelationBundle\Entity\ForeignEntity:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        field_1:
+            type: integer
+    lifecycleCallbacks: {  }
