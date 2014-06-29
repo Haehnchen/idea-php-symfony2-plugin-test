@@ -19,3 +19,19 @@
 
 {# not supported ! #}
 {{ 'gettext_weak.symfony.great'|trans({}, 'WeakGetText') }}
+
+
+{# --- TODO: pattern fix for this --- #}
+{{ 'form.tab.profile'|trans|desc('Interchange') }}
+{{ 'form.tab.profile'|trans({}, 'AcmeBundle')|desc('Profile') }}
+
+{# --- TODO: pattern fix for this --- #}
+{{ sonata_block_render({
+    'type': 'nice_block',
+    'settings': {
+        'title': 'block.nice.title'|trans,
+        'more_url': path('more_nice_stuff'),
+        'sub_partner_id': app.request.query.get('sub_partner_id')
+    }
+    })
+}}
