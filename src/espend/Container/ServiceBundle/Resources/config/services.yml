@@ -15,10 +15,17 @@ services:
     # should annotate type hint in argument and calls
     espend_container_service.yaml_hint_check:
         class: %espend_container_service.yaml.class%
-        arguments: [@twig]
+        arguments: [@twig, @twig]
         calls:
             - [publicMethodHint, [@twig]]
             - [publicMethodHint, ["@twig"]]
+
+    # should annotate type hint in arguments
+    espend_container_service.yaml_hint_squence_check:
+        class: %espend_container_service.yaml.class%
+        arguments:
+           - @twig
+           - @twig
 
     # should provide goto to xml parameter
     espend_container_service.yaml_cross_parameter:

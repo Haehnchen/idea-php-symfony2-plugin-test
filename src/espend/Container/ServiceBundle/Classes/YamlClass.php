@@ -6,7 +6,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class YamlClass {
 
-    public function __construct(ContainerInterface $container) {  }
+    public function __construct(ContainerInterface $container, ContainerInterface $container1) {  }
 
     public function publicMethod() {}
     protected function protectedMethod() {}
