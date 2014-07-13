@@ -22,6 +22,8 @@ class AppKernel extends Kernel
             new espend\Router\RoutesBundle\espendRouterRoutesBundle(),
             new espend\Twig\TypeBundle\espendTwigTypeBundle(),
             new espend\Doctrine\RelationBundle\espendDoctrineRelationBundle(),
+            new espend\Form\TypeBundle\espendFormTypeBundle(),
+            new espend\Twig\TemplateBundle\espendTwigTemplateBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

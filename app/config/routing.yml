@@ -1,3 +1,7 @@
+espend_twig_template:
+    resource: "@espendTwigTemplateBundle/Resources/config/routing.yml"
+    prefix:   /
+
 espend_router_routes:
     resource: "@espendRouterRoutesBundle/Resources/config/routing.yml"
     prefix:   /

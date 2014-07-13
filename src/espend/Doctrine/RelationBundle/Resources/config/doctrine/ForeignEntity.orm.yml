@@ -10,4 +10,5 @@ espend\Doctrine\RelationBundle\Entity\ForeignEntity:
     fields:
         field_1:
             type: integer
+            column: dfdfdsf
     lifecycleCallbacks: {  }
