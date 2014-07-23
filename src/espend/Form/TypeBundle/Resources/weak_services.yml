@@ -1,0 +1,9 @@
+parameters:
+
+
+services:
+    acme_demo.form.type.gender:
+        class: espend\Form\TypeBundle\Form\FooType
+        tags:
+            - { name: form.type, alias: foo_type_alias  }
+            - { name: form.type, alias: foo_type_aliasa  }

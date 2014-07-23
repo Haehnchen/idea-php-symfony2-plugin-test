@@ -3,6 +3,12 @@ parameters:
 
 services:
     acme_demo.form.type.gender:
-        class: espend\Form\TypeBundle\Form\FooType
+        class: espend\Form\TypeBundle\Form\WeakFooType
         tags:
-            - { name: form.type, alias: foo_type_alias  }
+            - { name: form.type, alias: weak_return_alias  }
+
+    acme_demo_bundle.image_type_extension:
+        class: espend\Form\TypeBundle\Extension\WeakFormExtension
+        tags:
+            - { name: form.type_extension, alias: file }
+

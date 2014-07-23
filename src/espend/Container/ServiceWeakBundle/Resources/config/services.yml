@@ -21,3 +21,10 @@ services:
     # should provide goto
     espend_container_service.xml_weak_parameter:
         class: %espend_container_service_weak.xml.weak_class.class%
+
+    # should provide goto
+    espend_container_service.yaml_weak_tagged:
+        class: %espend_container_service_weak.xml.weak_class.class%
+        tags:
+            - { name: weak_tag_yml }
+            - { name: weak_tag_xml }
