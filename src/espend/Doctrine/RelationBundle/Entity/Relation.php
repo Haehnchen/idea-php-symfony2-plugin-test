@@ -192,4 +192,32 @@ class Relation
     {
         return $this->many_to_many;
     }
+    /**
+     * @var \espend\Doctrine\RelationBundle\Entity\ForeignEntity
+     */
+    private $many_to_one_ns;
+
+
+    /**
+     * Set many_to_one_ns
+     *
+     * @param \espend\Doctrine\RelationBundle\Entity\ForeignEntity $manyToOneNs
+     * @return Relation
+     */
+    public function setManyToOneNs(\espend\Doctrine\RelationBundle\Entity\ForeignEntity $manyToOneNs = null)
+    {
+        $this->many_to_one_ns = $manyToOneNs;
+
+        return $this;
+    }
+
+    /**
+     * Get many_to_one_ns
+     *
+     * @return \espend\Doctrine\RelationBundle\Entity\ForeignEntity 
+     */
+    public function getManyToOneNs()
+    {
+        return $this->many_to_one_ns;
+    }
 }

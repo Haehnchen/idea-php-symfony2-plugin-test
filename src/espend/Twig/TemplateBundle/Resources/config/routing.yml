@@ -1,0 +1,8 @@
+espend_twig_template_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: espendTwigTemplateBundle:Default:index }
+
+espend_twig_template_sub_folder:
+    pattern:  /sub_folder
+    defaults: { _controller: espendTwigTemplateBundle:Default:indexSubFolder }
+

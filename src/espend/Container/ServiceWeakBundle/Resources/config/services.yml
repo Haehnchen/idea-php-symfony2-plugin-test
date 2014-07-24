@@ -26,5 +26,5 @@ services:
     espend_container_service.yaml_weak_tagged:
         class: %espend_container_service_weak.xml.weak_class.class%
         tags:
-            - { name: weak_tag_yml }
+            - { name:  }
             - { name: weak_tag_xml }

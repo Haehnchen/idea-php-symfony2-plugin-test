@@ -11,12 +11,13 @@ espend\Doctrine\RelationBundle\Entity\Relation:
     fields:
         foo:
             type: integer
+            column: 'test_tset'
     manyToOne:
         many_to_one:
             targetEntity: espend\Doctrine\RelationBundle\Entity\ForeignEntity
 
         # TODO same namespace
-        many_to_one:
+        many_to_one_ns:
             targetEntity: ForeignEntity
 
     manyToMany:

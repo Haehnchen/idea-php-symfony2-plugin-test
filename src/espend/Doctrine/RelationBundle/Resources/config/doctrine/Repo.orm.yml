@@ -1,0 +1,14 @@
+espend\Doctrine\RelationBundle\Entity\Repo:
+    type: entity
+    table: foo_table_relation
+    repositoryClass: RepoRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        repo:
+            type: integer
+    lifecycleCallbacks: {  }
