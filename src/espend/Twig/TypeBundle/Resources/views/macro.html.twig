@@ -1,0 +1,9 @@
+{# request1 \Symfony\Component\HttpFoundation\Request #}
+
+{% macro foo() %}
+
+    {# request \Symfony\Component\HttpFoundation\Request #}
+    {{ request.cookies }}
+    {{ request1.cookies }}
+
+{% endmacro %}
