@@ -25,6 +25,8 @@ class AppKernel extends Kernel
             new espend\Form\TypeBundle\espendFormTypeBundle(),
             new espend\Twig\TemplateBundle\espendTwigTemplateBundle(),
             new espend\Validation\ConstraintsBundle\espendValidationConstraintsBundle(),
+            new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
+            new espend\Doctrine\MongoDbBundle\espendDoctrineMongoDbBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

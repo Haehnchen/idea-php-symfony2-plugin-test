@@ -1,0 +1,9 @@
+espend\Doctrine\MongoDbBundle\Document\MongoYaml:
+    repositoryClass: \espend\Doctrine\MongoDbBundle\Document\FooMongoYamlRepository
+    fields:
+        id:
+            id:  true
+        name:
+            type: string
+        price:
+            type: float
