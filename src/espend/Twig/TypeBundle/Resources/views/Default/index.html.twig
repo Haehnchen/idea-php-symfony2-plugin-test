@@ -1,7 +1,7 @@
 
 {# bar \espend\Doctrine\ModelBundle\Entity\Bike #}
 
-{% block test0 %}
+{% block a  %}
 
     {{ car.id }}
 
@@ -10,10 +10,13 @@
     {% endfor %}
 
     {{ bar.field1 }}
-
+{{  }}
 {% endblock %}
 
 {% block test1 %}
+
+    {% from 'espendTwigTypeBundle::macro.html.twig' import foo %}
+
     {% include 'espendTwigTypeBundle:Default/Include:type_include.html.twig' with {'foo': car} only %}
 {% endblock %}
 
@@ -28,5 +31,7 @@
 {% block test3 %}
 
     {% include 'espendTwigTypeBundle:Default/Include:type_include_with.html.twig' with {'foo': car} %}
+
+    {{ 'sdsd'| }}
 
 {% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'espendTwigTemplateBundle:Default/Inheritance:base.html.twig' %}
+
+{% use 'espendTwigTemplateBundle:Default/Inheritance:use.html.twig' %}
+
+{% block foo5 %}
+{% endblock %}
+
+{% block foo2 %}
+    {{ block('foo5') }}
+    {{ block('bar2') }}
+    {{ parent() }}
+{% enblock %}
