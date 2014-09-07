@@ -9,3 +9,7 @@ espend_router_routes:
 espendTranslationDomainBundle:
     resource: "@espendTranslationDomainBundle/Resources/config/routing.yml"
     prefix:   /
+
+post:
+    resource: "@espendRouterRoutesBundle/Controller/AnnotationController.php"
+    type:     annotation

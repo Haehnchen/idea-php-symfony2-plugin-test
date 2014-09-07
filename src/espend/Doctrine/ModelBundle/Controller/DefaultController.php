@@ -75,10 +75,18 @@ class DefaultController extends Controller
 
     public function qbRelationAction()
     {
+
         // should provide goto and resolve current yaml namespace
         $qb = $this->get('doctrine')->getRepository('espendDoctrineRelationBundle:Relation')->createQueryBuilder('relation');
+
         $qb->join('relation.many_to_one_ns', 'manyToOneNs');
         $qb->addSelect('manyToOneNs.field_1');
+
+        $qb->andWhere($qb->expr()->eq('relation.foo', '1'));
+        $qb->andWhere($qb->expr()->eq('relation.many_to_many', '1'));
+
+        $qb1 = $this->get('doctrine')->getRepository('espendDoctrineRelationBundle:Relation')->createQueryBuilder('relation');
+        $qb1->from('espendDoctrineMongoDbBundle:MongoYaml', 'mongoYaml', 'relation.id');
     }
 
     public function repositoryInCurrentNamespaceAction()

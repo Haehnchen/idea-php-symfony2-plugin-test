@@ -21,6 +21,7 @@ espend\Doctrine\RelationBundle\Entity\Relation:
             targetEntity: ForeignEntity
 
     manyToMany:
+
         many_to_many:
             targetEntity: espend\Doctrine\RelationBundle\Entity\ForeignEntity
             joinTable:
