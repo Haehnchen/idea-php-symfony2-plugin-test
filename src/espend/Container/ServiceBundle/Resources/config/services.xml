@@ -3,10 +3,10 @@
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="espend_container_service.xml.class">espend\Container\ServiceBundle\Classes\XmlClass</parameter>
+        <parameter key="espend_container_service.xml.class">espend\Container\ServiceBundle\Classes</parameter>
 
         <!-- should annotate duplicate -->
-        <parameter key="espend_parameter_duplicate">espend\Container\ServiceBundle\Classes\XmlClass</parameter>
+        <parameter key="espend_parameter_duplicate">espend\Container\ServiceBundle\Classes</parameter>
         <parameter key="espend_parameter_duplicate">espend\Container\ServiceBundle\Classes\XmlClass</parameter>
     </parameters>
 
@@ -27,6 +27,9 @@
         <!-- should annotate duplicate -->
         <service id="espend_service_duplicate" class="%espend_container_service.xml.class%" />
         <service id="espend_service_duplicate" class="%espend_container_service.xml.class%" />
+
+        <service id="espend_service_complete1" class="espend\Container\ServiceBundle\Event\MySubscriber" />
+        <service id="espend_service_complete2" class="\espend\Container\ServiceBundle\Event\MySubscriber" />
 
     </services>
 </container>

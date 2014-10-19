@@ -3,6 +3,7 @@
 namespace espend\Doctrine\ModelBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Doctrine\ORM\Mapping as ORM;
 
 class DefaultController extends Controller
 {
@@ -80,10 +81,15 @@ class DefaultController extends Controller
         $qb = $this->get('doctrine')->getRepository('espendDoctrineRelationBundle:Relation')->createQueryBuilder('relation');
 
         $qb->join('relation.many_to_one_ns', 'manyToOneNs');
-        $qb->addSelect('manyToOneNs.field_1');
+        $qb->addSelect('manyToOneNs.field_1', 'relation');
 
+        $qb->addSelect('relation', 'manyToOneNs', '');
+        $qb->addGroupBy('relation', 'relation');
         $qb->andWhere($qb->expr()->eq('relation.foo', '1'));
         $qb->andWhere($qb->expr()->eq('relation.many_to_many', '1'));
+
+        $qb->andWhere('relation.id =>  ');
+
 
         $qb1 = $this->get('doctrine')->getRepository('espendDoctrineRelationBundle:Relation')->createQueryBuilder('relation');
         $qb1->from('espendDoctrineMongoDbBundle:MongoYaml', 'mongoYaml', 'relation.id');

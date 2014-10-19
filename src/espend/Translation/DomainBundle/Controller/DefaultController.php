@@ -23,7 +23,7 @@ class DefaultController extends Controller
         // should valid because of indexer: goto, completion, annotator
         $this->container->get('translator')->trans('yaml_weak.symfony.great', [], 'WeakYaml');
 
-        // not supported
+        // xlf not have psielement, fallback to psifile
         $this->container->get('translator')->trans('xlf_weak.symfony.great', [], 'WeakInterchange');
 
         // not supported

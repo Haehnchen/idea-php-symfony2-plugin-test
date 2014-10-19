@@ -19,4 +19,11 @@ class DefaultController extends Controller
         ));
 
     }
+
+    public function quickFixAction()
+    {
+        // should build a file which already have extends and block collected on same directory twig files
+        $this->render('espendTwigTypeBundle:Quickfix:foo2.html.twig');
+    }
+
 }

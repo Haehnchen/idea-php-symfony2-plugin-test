@@ -9,3 +9,15 @@ espend_router_route_duplicate:
 espend_router_routes_homepage1:
     pattern:  /hello/{name}
     defaults: { _controller: espendRouterRoutesBundle:Default:index }
+    requirements:
+      name
+      foo: ''
+      foo: ''
+
+'espend_router_routes_homepage1':
+    path:  /hello/{name}
+    defaults: { _controller: espendRouterRoutesBundle:Default:index }
+    requirements:
+      name
+      foo: ''
+      foo: ''

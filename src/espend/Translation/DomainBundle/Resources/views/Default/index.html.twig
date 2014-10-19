@@ -14,12 +14,15 @@
 {# should valid because of indexer: goto, completion, annotator  #}
 {{ 'yaml_weak.symfony.great'|trans({}, 'WeakYaml') }}
 
-{# not supported ! #}
+{# should valid because of indexer: goto, completion, annotator ! #}
 {{ 'xlf_weak.symfony.great'|trans({}, 'WeakInterchange') }}
 
 {# not supported ! #}
 {{ 'gettext_weak.symfony.great'|trans({}, 'WeakGetText') }}
 
+
+{{ path( 'espend_twig_template_sub_folder') }}
+{{ asset( 'bundles/framework/css/exception.css' ) }}
 
 {# --- TODO: pattern fix for this --- #}
 {{ 'form.tab.profile'|trans|desc('Interchange') }}

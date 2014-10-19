@@ -17,7 +17,11 @@ class WeakFooType extends AbstractType
         ));
 
         $builder->add('test', null, array(
-            'label' => 'foo'
+            'property_path' => 'foo'
+        ));
+
+        $builder->add('test', 'search', array(
+            'property_path' => 'foo'
         ));
 
         $builder->add('test', $this->foo, array(
