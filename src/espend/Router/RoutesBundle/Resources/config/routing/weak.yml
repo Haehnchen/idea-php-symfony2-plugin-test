@@ -14,3 +14,11 @@ espend_router_weak_route_compound:
 espend_router_weak_route_invalid_index:
     pattern_:  /weak
     defaults: { _controller: espendRouterRoutesBundle:Default:index }
+
+espend_router_weak_route_invalid_index2:
+    pattern_:  /weak
+    defaults: { _controller: 'espendRouterRoutesBundle:Default:index' }
+
+espend_router_weak_route_invalid_index3:
+    pattern_:  /weak
+    defaults: { _controller: "espendRouterRoutesBundle:Default:index" }
