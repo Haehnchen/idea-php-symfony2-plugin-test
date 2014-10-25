@@ -30,11 +30,10 @@
 {{ path( 'espend_twig_template_sub_folder') }}
 {{ asset( 'bundles/framework/css/exception.css' ) }}
 
-{# --- TODO: pattern fix for this --- #}
-{{ 'form.tab.profile'|trans|desc('Interchange') }}
-{{ 'form.tab.profile'|trans({}, 'AcmeBundle')|desc('Profile') }}
+{# trans regular check #}
+{{ 'Symfony2 is great'|trans|desc('Interchange') }}
+{{ 'yaml_weak.symfony.great'|trans({}, 'WeakYaml')|desc('Profile') }}
 
-{# --- TODO: pattern fix for this --- #}
 {{ sonata_block_render({
     'type': 'nice_block',
     'settings': {
