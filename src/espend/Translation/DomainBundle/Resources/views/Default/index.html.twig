@@ -21,6 +21,12 @@
 {{ 'gettext_weak.symfony.great'|trans({}, 'WeakGetText') }}
 
 
+{{ "system-translation.foo"|trans( {} , 'system-translation') }}
+{{ "system-translation.foo" | trans(   {}, 'system-translation' ) }}
+
+{{ "system-translation.foo"|transchoice(5,{},'system-translation') }}
+{{ "system-translation.foo"  |   transchoice( 5  ,      { "asd": "%%"} ,       'system-translation'    ) }}
+
 {{ path( 'espend_twig_template_sub_folder') }}
 {{ asset( 'bundles/framework/css/exception.css' ) }}
 
