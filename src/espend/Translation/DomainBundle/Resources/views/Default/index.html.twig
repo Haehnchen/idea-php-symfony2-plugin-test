@@ -17,18 +17,21 @@
 {# should valid because of indexer: goto, completion, annotator ! #}
 {{ 'xlf_weak.symfony.great'|trans({}, 'WeakInterchange') }}
 
-{# not supported ! #}
+{# not supported file format ! #}
 {{ 'gettext_weak.symfony.great'|trans({}, 'WeakGetText') }}
 
-
+{# white space check #}
 {{ "system-translation.foo"|trans( {} , 'system-translation') }}
 {{ "system-translation.foo" | trans(   {}, 'system-translation' ) }}
 
 {{ "system-translation.foo"|transchoice(5,{},'system-translation') }}
 {{ "system-translation.foo"  |   transchoice( 5  ,      { "asd": "%%"} ,       'system-translation'    ) }}
 
-{{ path( 'espend_twig_template_sub_folder') }}
-{{ asset( 'bundles/framework/css/exception.css' ) }}
+{# translation extractor #}
+<a href="#">foo bar</a>
+<a href="#">foo</a>
+<a href="#" title="foo bar">#</a>
+<a href="#" title="foo">#</a>
 
 {# trans regular check #}
 {{ 'Symfony2 is great'|trans|desc('Interchange') }}
