@@ -31,5 +31,9 @@
         <service id="espend_service_complete1" class="espend\Container\ServiceBundle\Event\MySubscriber" />
         <service id="espend_service_complete2" class="\espend\Container\ServiceBundle\Event\MySubscriber" />
 
+        <service id="kernel.listener.your_listener_name" class="%espend_container_service.xml.class%">
+            <tag name="kernel.event_listener" event="kernel.request" method="crossHint" />
+        </service>
+
     </services>
 </container>

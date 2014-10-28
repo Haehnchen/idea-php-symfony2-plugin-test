@@ -2,6 +2,8 @@
 
 namespace espend\Doctrine\ModelBundle\Controller;
 
+use Doctrine\Common\Persistence\Mapping\Driver\SymfonyFileLocator;
+use Doctrine\ORM\EntityManager;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -18,6 +20,7 @@ class DefaultController extends Controller
         // TODO
         //$em->getClassMetadata();
 
+        /** @var EntityManager $em */
         $em = $this->getDoctrine()->getManager();
 
         // repository resolve
@@ -29,6 +32,7 @@ class DefaultController extends Controller
         $em->getRepository('espendDoctrineModelBundle:Car')->find(1)->getId();
         $em->getRepository('espendDoctrineModelBundle:Car')->findOneBy(array())->getId();
         $em->getRepository('espendDoctrineModelBundle:Car')->findBy(array())[0]->getId();
+        $em->getRepository(\espend\Doctrine\ModelBundle\Entity\Car::class)->findBy(array())[0]->getId();
 
         // type provider for array
         $array = $em->getRepository('espendDoctrineModelBundle:Car')->findAll();

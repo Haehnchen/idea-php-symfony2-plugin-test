@@ -1,0 +1,33 @@
+
+
+{% block javascripts %}
+
+    {% javascripts 'assets/*' %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+    {% javascripts
+        'assets/foo.js'
+        '@MopaBootstrapBundle/Resources/public/js/mopabootstrap-collection.js'
+        %}
+
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+{% endblock %}
+
+
+{% block stylesheets %}
+
+    {% stylesheets
+        'assets/foo.css'
+        'assets/*.css'
+        filter="cssrewrite"
+        %}
+
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+
+{% endblock %}
+
+<link href="{{ asset('assets/foo.css') }}" rel="stylesheet" type="text/css" />

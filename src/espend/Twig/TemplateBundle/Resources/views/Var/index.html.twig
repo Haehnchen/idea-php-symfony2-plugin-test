@@ -1,0 +1,8 @@
+{# espendTwigTemplateBundle:Var:index.html.twig #}
+{% extends '::base.html.twig' %}
+
+{% block content %}
+  {% for bike in bikes %}
+    {% include 'espendTwigTemplateBundle:Var:bike.html.twig' %}
+  {% endfor %}
+{% endblock %}
