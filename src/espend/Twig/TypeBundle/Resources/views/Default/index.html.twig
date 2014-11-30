@@ -1,4 +1,3 @@
-
 {# bar \espend\Doctrine\ModelBundle\Entity\Bike #}
 
 {% block a  %}
@@ -10,7 +9,7 @@
     {% endfor %}
 
     {{ bar.field1 }}
-{{  }}
+
 {% endblock %}
 
 {% block test1 %}
@@ -24,14 +23,17 @@
 
     {% for foo in cars %}
         {% include 'espendTwigTypeBundle:Default/Include:type_include_each.html.twig' with {'car': foo} %}
+        {{ include('espendTwigTypeBundle:Default/Include:type_include_each.html.twig', {'foo2': foo}, with_context = false) }}
+
+        {% embed "espendTwigTypeBundle:Default/Include:type_embed.html.twig" with {'foo': 'bar'} only %}
+        {% endembed %}
+
+        {{ include('espendTwigTypeBundle:Default/Include:type_include_function_no_context.html.twig', {'foo2': foo}, with_context = false) }}
+        {{ include('espendTwigTypeBundle:Default/Include:type_include_function_context.html.twig', {'foo2': foo}) }}
     {% endfor %}
 
 {% endblock %}
 
 {% block test3 %}
-
     {% include 'espendTwigTypeBundle:Default/Include:type_include_with.html.twig' with {'foo': car} %}
-
-    {{ 'sdsd'| }}
-
 {% endblock %}
